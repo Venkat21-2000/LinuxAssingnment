@@ -82,6 +82,10 @@ for file in $files; do
     fi
 done
 ```
+we can also use following command to find and uncompress of one type of compression <br>
+`find / -name "*research.*" -exec sh -c 'gunzip -d "{}" \; 2>/dev/null`<br>
+in the above command by replacing sutaible unzip type we can uncompress same compression type
+
 
 
 
