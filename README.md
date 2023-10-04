@@ -46,11 +46,45 @@ In this method first we create a file by name describe in `/usr/local/bin/` loca
 #!/bin/bash
 ls
 ```
-After saving this file we need to executable permission to the above file. 
+After saving this file we need to executable permission to the above file. <br>
 `chmod a+x describe`<br>
 The above command will enable all the users in the shell to usse describe as command to list the files in current directory.
 
 ## Question 4
+#### Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.
+
+```bash
+#!/bin/bash
+
+# Find all compressed research files
+files=$(find / -name "research.*" -type f 2>/dev/null)
+
+for file in $files; do
+    file_extension=$(file $file | grep -Po "(?:gzip|bzip2|zip|xz)")
+    if [[ $file_extension == "gzip" ]]
+    then
+        gunzip $file
+	echo "The file is  found in path $file and compression type is $file_extension"
+    elif [[ $file_extension == "xz" ]]
+    then
+        unxz $file
+        echo "The file is  found in path $file and compression type is $file_extension"
+    elif [[ $file_extension == "bzip2" ]]
+    then
+        bunzip2 $file
+        echo "The file is  found in path $file and compression type is $file_extension"
+    elif [[ $file_extension == "zip" ]]
+    then
+        unzip $file
+        echo "The file is  found in path $file and compression type is $file_extension"
+    else
+        echo "The file is not compressed"
+    fi
+done
+```
+
+
+
 
 
 
