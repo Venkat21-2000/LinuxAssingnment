@@ -12,16 +12,18 @@ Step 2 :After that the installation will start and the postfix window will open.
 Step 3 : After complition of installation we have to make changes in main.cf file present in path `/etc/postfix/main.cf`<br>
 
 `cd /etc/postfix`<br>
-`sudo nano main.cf`
-after this scroll down to bottom of file and change the line
+`sudo nano main.cf`<br>
+after this scroll down to bottom of file and change the line<br>
 `inet_interfaces = all` to `inet_interfaces = loopback-only`
 
-Step 4 : Install mailutils
-`sudo apt install mailutils`
+Step 4 : Install mailutils<br>
+`sudo apt install mailutils`<br>
 
 Step 5 : Send a mail using the following command<br>
-`echo mail -s 'enter a subject' resever@gmail.com`
+`echo mail -s 'enter a subject' resever@gmail.com`<br>
 The above command will prompt to add CC and subject of mail. To end the edit mode and send the email use `Ctrl+D`
+
+##Question 2
 
 
 
