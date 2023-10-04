@@ -46,6 +46,12 @@ In this method first we create a file by name describe in `/usr/local/bin/` loca
 #!/bin/bash
 ls
 ```
+After saving this file we need to executable permission to the above file. 
+`chmod a+x describe`<br>
+The above command will enable all the users in the shell to usse describe as command to list the files in current directory.
+
+## Question 4
+
 
 
 
