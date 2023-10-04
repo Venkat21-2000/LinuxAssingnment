@@ -10,8 +10,8 @@ Step 2 :After that the installation will start and the postfix window will open.
 2. enter custom mail like ex: host.example.com<br>
 Step 3 : After complition of installation we have to make changes in main.cf file present in path `/etc/postfix/main.cf`<br>
 
-`cd /etc/postfix`
-`sudo nano main.cf`
+```cd /etc/postfix`
+`sudo nano main.cf```
 after this scroll down to bottom of file and change the line
 `inet_interfaces = all` to `inet_interfaces = loopback-only`
 
