@@ -6,3 +6,4 @@ Step 1 : Install Postfix
 $sudo apt install postfix
 ```
 Step 2 : Install mailutils
+'$sudo apt install mailutils'
