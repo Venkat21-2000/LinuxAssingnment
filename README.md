@@ -5,12 +5,20 @@ Step 1 : Install Postfix
 
 `$sudo apt install postfix`
 
-Step 3 :After that the installation will start and the postfix window will open. And we have to select some options on that window.<br>
+Step 2 :After that the installation will start and the postfix window will open. And we have to select some options on that window.<br>
 1. select internet site and enter tab and enter enter.<br>
-2. enter custom mail like ex: host.example.com<br><br>
+2. enter custom mail like ex: host.example.com<br>
 Step 3 : After complition of installation we have to make changes in main.cf file present in path `/etc/postfix/main.cf`<br>
 
 `cd /etc/postfix`
+`sudo nano main.cf`
+after this scroll down to bottom of file and change the line
+`inet_interfaces = all` to `inet_interfaces = loopback-only`
+
+
+
+
+ 
 
 
 
