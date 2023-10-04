@@ -53,7 +53,7 @@ The above command will enable all the users in the shell to usse describe as com
 ## Question 4
 #### Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.
 
-```
+```bash
 
 #!/bin/bash
 
@@ -83,9 +83,12 @@ for file in $files; do
     fi
 done
 ```
-we can also use following command to find and uncompress of one type of compression <br>
+we can also use following command to find and uncompress of one type of compression <br><br>
 `find / -name "*research.*" -exec sh -c 'gunzip -d "{}" \; 2>/dev/null`<br>
 in the above command by replacing sutaible unzip type we can uncompress same compression type
+
+## Question 5 
+#### Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.
 
 
 
