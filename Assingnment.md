@@ -133,8 +133,10 @@ do
 done
 ```
 Then give the script executable permission using `chmod a+x showtime.sh`.<br>
-The above script will write current date and time to `showtime.log` in home directory.
+The above script will write current date and time to `showtime.log` which is created in home directory.
 
+Then before starting the service we have to enable it.<br>
+To enable we use `sudo systemctl start showtime.service`<br>
 To start the service : `sudo systemctl start showtime.service`<br>
 To know status of service : `sudo systemctl status showtime.service`<br>
 To Stop the service : `sudo systemctl stop showtime.service`<br>
