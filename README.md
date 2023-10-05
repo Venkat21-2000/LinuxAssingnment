@@ -97,6 +97,7 @@ in the above command by replacing sutaible unzip type we can uncompress differen
 
 ## Question 5 
 #### Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.
+Add umask value 0777 at the end of  bash.bashrc file
 `umask 0777`
 
 ## Question 6
