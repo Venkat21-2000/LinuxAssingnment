@@ -131,6 +131,7 @@ do
 	sleep 60
 done
 ```
+Then give the script executable permission using `chmod a+x showtime.sh`.<br>
 The above script will write current date and time to `showtime.log` in home directory.
 
 To start the service : `sudo systemctl start showtime.service`<br>
