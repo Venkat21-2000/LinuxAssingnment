@@ -43,7 +43,7 @@ In this method we add `describe` as alias of `ls` command in `/home/sigmoid/.bas
 at the end of the file and save it. Then restart the session now the `describe` will do desired task.
 
 #### Method 2 : Creating custom command
-In this method first we create a file by name describe in `/usr/local/bin/` location. Inside this file write following command.
+In this method first we create a file by name describe in `anishj1357/usr/local/bin/` location. Inside this file write following command.
 ```bash
 #!/bin/bash
 ls
@@ -54,6 +54,8 @@ The above command will enable all the users in the shell to usse describe as com
 
 ## Question 4
 #### Users can put a compressed file at any path of the linux file system. The name of the file will be research and the extension will be of compression type, example for gzip type extension will be .gz. You have to find the file and check the compression type and uncompress it.
+##### Method 1
+Go to `/usr/local/bin/` directory using `cd` commmand and create a file  by name uncompress the  write and save  following  script<br><br>     
 
 ```bash
 
@@ -85,6 +87,10 @@ for file in $files; do
     fi
 done
 ```
+
+after this  ececute `sudo chmod a+x uncompress` command to give executable permission.<br>
+Now we can use uncompress as a command to find and uncompress the file.<br><br>
+##### Method 2
 we can also use following command to find and uncompress of one type of compression <br><br>
 `find / -name "*research.*" -exec sh -c 'gunzip -d "{}" \; 2>/dev/null`<br><br>	
 in the above command by replacing sutaible unzip type we can uncompress different types.
