@@ -16,11 +16,13 @@ Step 3 : After complition of installation we have to make changes in main.cf fil
 after this scroll down to bottom of file and change the line<br>
 `inet_interfaces = all` to `inet_interfaces = loopback-only`<br>
 
+after saving this run command `sudo systemctl restart postfix`<br>
+
 Step 4 : Install mailutils<br>
 `sudo apt install mailutils`<br>
 
 Step 5 : Send a mail using the following command<br>
-`echo mail -s 'enter a subject' resever@gmail.com`<br>
+`mail -s 'enter a subject' resever@gmail.com`<br>
 The above command will prompt to add CC and subject of mail. To end the edit mode and send the email use `Ctrl+D`
 
 ## Question 2
