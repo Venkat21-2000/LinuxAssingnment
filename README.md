@@ -36,7 +36,7 @@ Whenever we create  a user in linux, by default it will not have sudo access. To
 
 #### Method 1 : Using alias
 
-In thus method we add `describe` as alias of `ls` command in `/home/sigmoid/.bashrc` file write as following <br>
+In this method we add `describe` as alias of `ls` command in `/home/sigmoid/.bashrc` file write as following <br>
 `alias describe="ls"`<br>
 at the end of the file and save it. Then restart the session now the `describe` will do desired task.
 
@@ -89,6 +89,48 @@ in the above command by replacing sutaible unzip type we can uncompress same com
 
 ## Question 5 
 #### Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.
+`umask 0777`
+
+## Question 6
+#### Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.
+Create a service by name `showtime.service` in `/etc/systemd/system` and write a service here.<br>
+
+Step 1 :<br>
+```bash
+[Unit]
+Description=Linux Assingnment
+After=network.target
+
+[Service]
+WorkingDirectory=/home/sigmoid/Desktop/
+ExecStart=/home/sigmoid/Desktop/showtime.sh
+
+
+[Install]
+WantedBy=multi-user.target
+```
+The above code snippet will create a service.
+
+Step 2 : create  a shell script to record time.
+```bash
+#!/bin/bash
+
+
+
+while true;
+do
+	date >> /home/sigmoid/showtime.log
+	sleep 60
+done
+```
+The above script will write current date and time to `showtime.log` in home directory.
+
+To start the service : `sudo systemctl start showtime.service`<br>
+To know status of service : `sudo systemctl status showtime.service`<br>
+To Stop the service : `sudo systemctl stop showtime.service`<br>
+
+
+
 
 
 
