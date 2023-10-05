@@ -99,7 +99,7 @@ in the above command by replacing sutaible unzip type we can uncompress differen
 #### Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.
 Add umask value 0777 at the end of  bash.bashrc file
 `umask 0777`
-
+ 
 ## Question 6
 #### Create a service with the name showtime , after starting the service, every minute it should print the current time in a file in the user home directory.
 Create a service by name `showtime.service` in `/etc/systemd/system` and write a service here.<br>
