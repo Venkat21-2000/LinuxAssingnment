@@ -84,8 +84,8 @@ for file in $files; do
 done
 ```
 we can also use following command to find and uncompress of one type of compression <br><br>
-`find / -name "*research.*" -exec sh -c 'gunzip -d "{}" \; 2>/dev/null`<br>
-in the above command by replacing sutaible unzip type we can uncompress same compression type
+`find / -name "*research.*" -exec sh -c 'gunzip -d "{}" \; 2>/dev/null`<br><br>	
+in the above command by replacing sutaible unzip type we can uncompress different types.
 
 ## Question 5 
 #### Configure your system in such a way that any user of your system creates a file then there should not be permission to do any activity in that file.
