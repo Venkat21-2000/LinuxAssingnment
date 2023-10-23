@@ -43,7 +43,7 @@ In this method we add `describe` as alias of `ls` command in `/home/sigmoid/.bas
 at the end of the file and save it. Then restart the session now the `describe` will do desired task.
 
 #### Method 2 : Creating custom command
-In this method first we create a file by name describe in `anishj1357/usr/local/bin/` location. Inside this file write following command.
+In this method first we create a file by name describe in `/usr/local/bin/` location. Inside this file write following command.
 ```bash
 #!/bin/bash
 ls
@@ -136,7 +136,7 @@ Then give the script executable permission using `chmod a+x showtime.sh`.<br>
 The above script will write current date and time to `showtime.log` which is created in home directory.
 
 Then before starting the service we have to enable it.<br>
-To enable we use `sudo systemctl start showtime.service`<br>
+To enable we use `sudo systemctl enable showtime.service`<br>
 To start the service : `sudo systemctl start showtime.service`<br>
 To know status of service : `sudo systemctl status showtime.service`<br>
 To Stop the service : `sudo systemctl stop showtime.service`<br>
